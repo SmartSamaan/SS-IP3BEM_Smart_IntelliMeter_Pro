@@ -21,7 +21,7 @@ The board includes ADE7758 24-pin SOIC which can also communicate via SPI commun
 •	A PGA in the current channel allows a direct interface to current transformers.<br />
 •	A SPI-compatible serial interface with IRQ<br />
 •	3-phase bidirectional energy measurement<br />
-For more information, visit https://smartsamaan.com/<br />
 
-# This repository contains the sample code and library required for the embedded development of this board. The Energy_Meter.zip folder contains the html and php files for sending data to the localhost webserver. For localhost running, install the platform like xampp first.
+For more information, visit https://smartsamaan.com/<br />
+This repository contains the sample code and library required for the embedded development of this board. The Energy_Meter.zip folder contains the html and php files for sending data to the localhost webserver. For localhost running, install the platform like xampp first.
 
