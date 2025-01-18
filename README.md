@@ -9,3 +9,5 @@ Smart IntelliMeter Pro SS-IP3BEM is an industrial grade WiFi MCU based 3-phase b
 •	A JTAG interface for programming of the MCU using ESP-IDF<br />
 •	Two pushbuttons for custom navigation of LCD display windows<br />
 •	RS-485 communication port for industrial grade communication with other devices <br />
+
+The Energy_Meter.zip folder contains the html and php files for sending data to the localhost webserver. For localhost running, install the platform like xampp first.
