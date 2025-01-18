@@ -1,4 +1,4 @@
-# SS-IP3BEM_Smart_IntelliMeter_Pro
+# **SS-IP3BEM Smart IntelliMeter Pro: WiFi Based Three-Phase Bidirectional Energy Metering Evaluation/Development Board**
 Smart IntelliMeter Pro: WiFi Based Three-Phase Bidirectional Energy Metering Evaluation/Development Board <br />
 Smart IntelliMeter Pro SS-IP3BEM is an industrial grade WiFi MCU based 3-phase bidirectional energy metering development/evaluation board with an onboard ESP32-WROOM-32UE WiFi/Bluetooth controller incorporating a RS-485 communication port. The board has the capability to interface with a character LCD (16x2, 20x2, 16x4, or 20x4) in 4-bit mode as well as a serial I2C display. The on-chip flash memory of the controller is used to store the energy variables as well as calibration constants. The main features of the board are:<br />
 •	ESP32-WROOM-32UE controller 4MB Flash, 448kB ROM, 536kB SRAM<br />
@@ -21,5 +21,7 @@ The board includes ADE7758 24-pin SOIC which can also communicate via SPI commun
 •	A PGA in the current channel allows a direct interface to current transformers.<br />
 •	A SPI-compatible serial interface with IRQ<br />
 •	3-phase bidirectional energy measurement<br />
+For more information, visit https://smartsamaan.com/<br />
 
-The Energy_Meter.zip folder contains the html and php files for sending data to the localhost webserver. For localhost running, install the platform like xampp first.
+# This repository contains the sample code and library required for the embedded development of this board. The Energy_Meter.zip folder contains the html and php files for sending data to the localhost webserver. For localhost running, install the platform like xampp first.
+
