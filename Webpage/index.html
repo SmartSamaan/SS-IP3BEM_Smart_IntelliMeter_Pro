@@ -1,1 +1,92 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy Metering Data</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        #status {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Energy Metering Data</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Phase</th>
+                <th>Voltage (V)</th>
+                <th>Current (A)</th>
+                <th>Active Power (kW)</th>
+                <th>Reactive Power (kVAR)</th>
+                <th>Apparent Power (kVA)</th>
+                <th>Energy (kWh)</th>
+            </tr>
+        </thead>
+        <tbody id="dataTable">
+            <tr>
+                <td>1</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td>
+            </tr>
+            <tr>
+                <td>2</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td>
+            </tr>
+            <tr>
+                <td>3</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td>
+            </tr>
+        </tbody>
+    </table>
+    <div id="status">Last updated: Never</div>
+
+    <script>
+        function fetchData() {
+            fetch('fetch_data.php')
+                .then(response => response.json())
+                .then(data => {
+                    const tableBody = document.getElementById('dataTable');
+                    tableBody.innerHTML = '';
+                    data.forEach(row => {
+                        const tableRow = `<tr>
+                            <td>${row.phase}</td>
+                            <td>${row.voltage}</td>
+                            <td>${row.current}</td>
+                            <td>${row.active_power}</td>
+                            <td>${row.reactive_power}</td>
+                            <td>${row.apparent_power}</td>
+                            <td>${row.energy}</td>
+                        </tr>`;
+                        tableBody.innerHTML += tableRow;
+                    });
+                    document.getElementById('status').textContent = `Last updated: ${new Date().toLocaleTimeString()}`;
+                })
+                .catch(err => console.error('Error fetching data:', err));
+        }
+
+        setInterval(fetchData, 5000); // Update every 5 seconds
+        fetchData(); // Initial fetch
+    </script>
+</body>
+</html>
