@@ -1,5 +1,5 @@
 # SS-IP3BEM_Smart_IntelliMeter_Pro
-Smart IntelliMeter Pro: WiFi Based Three-Phase Bidirectional Energy Metering Evaluation/Development Board
+Smart IntelliMeter Pro: WiFi Based Three-Phase Bidirectional Energy Metering Evaluation/Development Board <br />
 Smart IntelliMeter Pro SS-IP3BEM is an industrial grade WiFi MCU based 3-phase bidirectional energy metering development/evaluation board with an onboard ESP32-WROOM-32UE WiFi/Bluetooth controller incorporating a RS-485 communication port. The board has the capability to interface with a character LCD (16x2, 20x2, 16x4, or 20x4) in 4-bit mode as well as a serial I2C display. The on-chip flash memory of the controller is used to store the energy variables as well as calibration constants. The main features of the board are:
 •	ESP32-WROOM-32UE controller 4MB Flash, 448kB ROM, 536kB SRAM
 •	WiFi protocol: 802.11b/g/n, Bluetooth v4.2 +EDR, Class 1, 2 and 3
